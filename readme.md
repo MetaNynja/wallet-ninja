@@ -28,7 +28,7 @@ Wallet Ninja provides the following capabilities:
 - **Windows**: [Download v1.0.0](https://github.com/yourusername/wallet-ninja/releases/download/v1.0.0/wallet-ninja.exe)
   - SHA256: [your-checksum]
 - **macOS**: [Download v1.0.0](https://github.com/yourusername/wallet-ninja/releases/download/v1.0.0/wallet-ninja.dmg)
-  - SHA256: [your-checksum]
+  - SHA256: [4e164613e9999eea49d00c5d89fd69744dfe90c6bc658c8cf5c94cfb43d6bec3]
 
 ## How to Use
 1. **Download**: Get the appropriate executable for your platform from the GitHub Releases page.
