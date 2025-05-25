@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallet Ninja</title>
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Wallet Ninja</h1>
+    <div class="alert alert-warning">
+      <strong>Warning:</strong> Keep your seed secret! Never share it. Run this app offline for maximum security.
+    </div>
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="offlineConfirm">
+      <label class="form-check-label" for="offlineConfirm">I confirm I am offline</label>
+    </div>
+    <div class="mb-3">
+      <label for="prefixes" class="form-label">Enter desired address prefixes (comma-separated):</label>
+      <input type="text" class="form-control" id="prefixes" placeholder="rJoeyWallet, rFirstLedger, rNynja" aria-describedby="prefixHelp">
+      <div id="prefixHelp" class="form-text">
+        Prefixes must start with 'r' and contain only alphanumeric characters. Searches are case-insensitive (e.g., 'rNynja' matches 'rnynja'). Shorter prefixes are generally found faster; longer prefixes may take longer.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="workers" class="form-label">Number of Workers (1-<span id="maxWorkers"></span>):</label>
+      <input type="number" class="form-control" id="workers" min="1" aria-describedby="workerHelp">
+      <div id="workerHelp" class="form-text">More workers increase speed but use more CPU.</div>
+    </div>
+    <button id="startBtn" class="btn btn-primary">Start Generating</button>
+    <button id="stopBtn" class="btn btn-danger" disabled>Stop</button>
+    <button id="saveBtn" class="btn btn-success" disabled>Save Results</button>
+    <div class="mt-3">
+      <h4>Progress</h4>
+      <p>Total wallets generated: <span id="attempts">0</span></p>
+      <div class="progress">
+        <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+    <div class="mt-3">
+      <h4>Results</h4>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Seed</th>
+            <th>Prefix</th>
+          </tr>
+        </thead>
+        <tbody id="resultsTable"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

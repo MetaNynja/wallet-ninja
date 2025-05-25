@@ -1,0 +1,36 @@
+{
+    "name": "wallet-ninja",
+    "version": "1.0.0",
+    "description": "Wallet Ninja - Generate custom XRP Ledger (XRPL) wallet addresses",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "dist": "electron-builder"
+    },
+    "author": "MetaNynja",
+    "license": "MIT",
+    "devDependencies": {
+      "electron": "^26.2.4",
+      "electron-builder": "^24.6.4"
+    },
+    "dependencies": {
+      "bootstrap": "^5.3.0",
+      "ripple-keypairs": "^1.1.4"
+    },
+    "build": {
+      "appId": "com.metanynja.walletninja",
+      "productName": "Wallet Ninja",
+      "mac": {
+        "category": "public.app-category.utilities",
+        "target": "dmg"
+      },
+      "win": {
+        "target": "nsis"
+      },
+      "files": [
+        "**/*",
+        "!node_modules/bootstrap/**",
+        "node_modules/bootstrap/dist/**"
+      ]
+    }
+  }
