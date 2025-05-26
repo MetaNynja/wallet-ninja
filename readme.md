@@ -26,13 +26,11 @@ Wallet Ninja provides the following capabilities:
 
 ## Download
 - **macOS (arm64)**: [Download v1.0.0](https://github.com/MetaNynja/wallet-ninja/releases/download/v1.0.0/Wallet.Ninja-1.0.0-arm64.dmg)
-  - SHA256: `7d0b4853e86080bebd6bcf609322b88385c5d1265de1f4b5de633525861c11d2`
-  - **Note**: If you see a “Wallet Ninja is damaged and can’t be opened” error, run the following in Terminal to bypass macOS Gatekeeper:
-    ```bash
-    xattr -cr /Applications/Wallet\ Ninja.app
-    ```
-    Then, right-click the app in Finder and select “Open.”
-- **Windows**: Coming soon. Check back for updates.
+  - SHA256: 7d0b4853e86080bebd6bcf609322b88385c5d1265de1f4b5de633525861c11d2
+  - **Note**: If you see a “Wallet Ninja is damaged” error, run `xattr -cr /Applications/Wallet Ninja.app` in Terminal and right-click to open.
+- **Windows (x64)**: [Download v1.0.0](https://github.com/MetaNynja/wallet-ninja/releases/download/v1.0.0/Wallet.Ninja.Setup.1.0.0-x64.exe)
+  - SHA256: 7d1097f06e64e81448eff697a83a8c49eb8e325f995cec32a90f033ade6d6357
+  - **Note**: For standard Windows PCs. Unsigned app may trigger a SmartScreen warning; click “Run anyway” to proceed.
 
 ## How to Use
 1. **Download**: Get the appropriate executable for your platform from the GitHub Releases page.
